@@ -231,7 +231,7 @@ class PyZip(object):
 					else:
 						self._extract_file(archive, (obj, filename), extract_to)
 				except Exception as exc:
-					print('[!] Ошибка извлечения файла %s\n[!] %e' %(obj,exc))
+					print('[!] Ошибка извлечения файла %s\n[!] %s' %(obj, exc))
 
 	# Извлечение файлов с архтва
 	def extract(self, files, extract_to=None):

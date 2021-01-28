@@ -35,6 +35,7 @@ import colorama
 
 import utils
 
+
 # Комманды для veracrypt
 # https://www.veracrypt.fr/en/Command%20Line%20Usage.html
 
@@ -644,6 +645,7 @@ def update_backup(commands):
             utils.set_flags_is_deleted_files(metadata, deleted_files)
 
         backup_metadata.update({
+            'recursion_level': max_recursion_level,
             'last_update': time.ctime(time.time()),
             'amount_appended_filse': amount_appended_files,
             'amount_updated_files': amount_updated_files,
